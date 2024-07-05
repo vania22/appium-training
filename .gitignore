@@ -15,7 +15,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
-idea/
+.idea/
 /allure-results
 /allure-report
 app/
