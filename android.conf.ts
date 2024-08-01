@@ -120,7 +120,7 @@ export const config: Options.Testrunner = {
     services: ['appium', 'visual'],
 
     // To start Android emulator:
-    //
+    // emulator -avd Samsung_1 -no-snapshot-load
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

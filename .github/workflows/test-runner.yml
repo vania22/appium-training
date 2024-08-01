@@ -1,0 +1,39 @@
+name: Test Runner
+
+on:
+  workflow_dispatch:
+
+env:
+  IPHONE_MODEL: iPhone 15 Pro Max
+  IOS_VERSION: 17.5
+  BOOT_TIMEOUT: 700
+
+jobs:
+  ios:
+    runs-on: macos@latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Export environment variables
+        run: |
+          export IPHONE_MODEL=$IPHONE_MODEL
+          export IOS_VERSION=$IOS_VERSION
+
+      - name: Start simulator
+        run: |
+          chmod a+x ./src/ci_helpers/create_ios_simulator.sh
+          ./src/ci_helpers/create_ios_simulator.sh
+
+      - name: Install dependencies
+        run: |
+          npm i
+
+      - name: Check simulator booting status
+        run: |
+          chmod a+x ./src/ci_helpers/wait_for_ios_boot.sh
+          ./src/ci_helpers/wait_for_ios_boot.sh
+
+#      - name: Execute the test
+#        run: |
+#          npm run ios

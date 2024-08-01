@@ -7,4 +7,3 @@ describe('My Login application', () => {
         await CatalogPage.clickOnProduct('Sauce Labs Backpack');
     })
 })
-

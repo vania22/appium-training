@@ -62,35 +62,7 @@ export const config: Options.Testrunner = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    // capabilities: [
-    //     {
-    //         android: {
-    //             port: 4444,
-    //             capabilities: {
-    //                 platformName: 'Android',
-    //                 'appium:deviceName': 'Samsung_1',
-    //                 'appium:automationName': 'UIAutomator2',
-    //                 'appium:app': './src/app/test_app.apk',
-    //                 'appium:appWaitActivity': '*',
-    //             }
-    //         },
-    //     },
-    //     {
-    //         iOS: {
-    //             port: 4445,
-    //             capabilities: {
-    //                 platformName: "iOS",
-    //                 "appium:automationName": "XCUITest",
-    //                 "appium:deviceName": "iPhone 15 Pro Max",
-    //                 "appium:platformVersion": "17.5",
-    //                 "appium:noReset": true,
-    //                 "appium:app": "./src/app/test_app.app",
-    //             }
-    //         }
-    //     }
-    // ],
-
-    capabilities:
+    capabilities: [
         {
             android: {
                 port: 4444,
@@ -102,6 +74,8 @@ export const config: Options.Testrunner = {
                     'appium:appWaitActivity': '*',
                 }
             },
+        },
+        {
             iOS: {
                 port: 4445,
                 capabilities: {
@@ -113,7 +87,33 @@ export const config: Options.Testrunner = {
                     "appium:app": "./src/app/test_app.app",
                 }
             }
-        },
+        }
+    ],
+
+    // capabilities:
+    //     {
+    //         android: {
+    //             port: 4444,
+    //             capabilities: {
+    //                 platformName: 'Android',
+    //                 'appium:deviceName': 'Samsung_1',
+    //                 'appium:automationName': 'UIAutomator2',
+    //                 'appium:app': './src/app/test_app.apk',
+    //                 'appium:appWaitActivity': '*',
+    //             }
+    //         },
+    //         iOS: {
+    //             port: 4445,
+    //             capabilities: {
+    //                 platformName: "iOS",
+    //                 "appium:automationName": "XCUITest",
+    //                 "appium:deviceName": "iPhone 15 Pro Max",
+    //                 "appium:platformVersion": "17.5",
+    //                 "appium:noReset": true,
+    //                 "appium:app": "./src/app/test_app.app",
+    //             }
+    //         }
+    //     },
 
     //
     // ===================

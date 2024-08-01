@@ -6,7 +6,7 @@ import Page from "./page.ts";
  */
 class CatalogPage extends Page {
     public get sauceLabsBackPack() {
-        return $('~Sauce Labs Backpack');
+        return this.isAndroid() ? $('~Sauce Labs Backpack') : $('~Sauce Labs Backpack')
     }
 
     public open() {
