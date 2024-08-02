@@ -2,6 +2,8 @@
 
 import type {Options} from '@wdio/types'
 
+const CI: boolean = process.env.CI === 'true'
+
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -63,18 +65,18 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [
-        {
-            android: {
-                port: 4444,
-                capabilities: {
-                    platformName: 'Android',
-                    'appium:deviceName': 'Samsung_1',
-                    'appium:automationName': 'UIAutomator2',
-                    'appium:app': './src/app/test_app.apk',
-                    'appium:appWaitActivity': '*',
-                }
-            },
-        },
+        // {
+        //     android: {
+        //         port: 4444,
+        //         capabilities: {
+        //             platformName: 'Android',
+        //             'appium:deviceName': 'Samsung_1',
+        //             'appium:automationName': 'UIAutomator2',
+        //             'appium:app': './src/app/test_app.apk',
+        //             'appium:appWaitActivity': '*',
+        //         }
+        //     },
+        // },
         {
             iOS: {
                 port: 4445,

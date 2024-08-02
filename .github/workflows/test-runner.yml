@@ -39,6 +39,6 @@ jobs:
           chmod a+x ./src/ci_helpers/wait_for_ios_boot.sh
           ./src/ci_helpers/wait_for_ios_boot.sh
 
-#      - name: Execute the test
-#        run: |
-#          npm run ios
+      - name: Execute the test
+        run: |
+          npx wdio run ./both.conf.ts
