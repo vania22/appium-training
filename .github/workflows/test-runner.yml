@@ -33,7 +33,9 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install --unsafe-perm --allow-root
+          brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman python@3.12
+          pip3 install setuptools
+          npm install
 
       - name: Check simulator booting status
         run: |
