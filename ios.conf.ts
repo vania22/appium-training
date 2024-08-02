@@ -71,7 +71,8 @@ export const config: Options.Testrunner = {
             "appium:platformVersion": "17.5",
             "appium:noReset": true,
             "appium:app": "./src/app/test_app.app",
-        }],
+        }
+    ],
 
     // export PATH=$PATH:/Users/ivan.krupskyi/Library/Android/sdk/tools
     // ===================
@@ -124,7 +125,10 @@ export const config: Options.Testrunner = {
         [
             'appium',
             {
-                logPath: './appium1/',
+                logPath: './iosAppium/',
+                args: {
+                    sessionOverride: true
+                }
             }
         ],
         'visual'],
