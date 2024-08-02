@@ -79,7 +79,7 @@ export const config: Options.Testrunner = {
         // },
         {
             iOS: {
-                port: 4445,
+                port: 4723,
                 capabilities: {
                     platformName: "iOS",
                     "appium:automationName": "XCUITest",
