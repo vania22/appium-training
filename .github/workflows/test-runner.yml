@@ -50,6 +50,7 @@ jobs:
       - name: Execute the test
         continue-on-error: true
         run: |
+          node -v
           npx wdio run ./both.conf.ts
 
       - name: Execute the test
