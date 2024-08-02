@@ -87,6 +87,7 @@ export const config: Options.Testrunner = {
                     "appium:platformVersion": "17.5",
                     "appium:noReset": true,
                     "appium:app": "./src/app/test_app.app",
+                    "appium:newCommandTimeout": 360000
                 }
             }
         }
