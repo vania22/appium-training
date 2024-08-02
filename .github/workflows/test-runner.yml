@@ -33,8 +33,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm cache clean --force  
-          npm i
+          npm ci --ignore-scripts
 
       - name: Install Appium
         continue-on-error: true
