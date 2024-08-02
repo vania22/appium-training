@@ -33,8 +33,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman python@3.12
           pip3 install setuptools
+          brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman python@3.12
           npm install
 
       - name: Check simulator booting status
