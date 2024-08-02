@@ -31,7 +31,15 @@ jobs:
           chmod a+x ./src/ci_helpers/create_ios_simulator.sh
           ./src/ci_helpers/create_ios_simulator.sh
 
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: ./node_modules
+          key: npm-${{ hashFiles('package-lock.json') }}
+
       - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
 
       - name: Check simulator booting status
