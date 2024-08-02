@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20.13
+          node-version: 18.17
           cache: 'npm'
 
       - name: Export environment variables
@@ -33,7 +33,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm explore npm/node_modules/@npmcli/run-script -g -- npm_config_global=false npm install node-gyp@latest
           npm i
 
       - name: Check simulator booting status
