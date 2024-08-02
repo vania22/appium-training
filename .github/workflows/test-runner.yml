@@ -42,16 +42,15 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
 
-      - name: Install Appium and Drivers
-        run: |
-          npm i -g appium
-          appium driver install xcuitest
-          appium driver install uiautomator2
-
       - name: Check simulator booting status
         run: |
           chmod a+x ./src/ci_helpers/wait_for_ios_boot.sh
           ./src/ci_helpers/wait_for_ios_boot.sh
+
+      - name: Execute the test
+        continue-on-error: true
+        run: |
+          npx wdio run ./both.conf.ts
 
       - name: Execute the test
         run: |
