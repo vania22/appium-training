@@ -121,12 +121,12 @@ export const config: Options.Testrunner = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: [
-        // [
-        //     'appium',
-        //     {
-        //         logPath: './appium1/',
-        //     }
-        // ],
+        [
+            'appium',
+            {
+                logPath: './appium1/',
+            }
+        ],
         'visual'],
 
     // To get available devices: xcrun simctl list

@@ -35,15 +35,16 @@ jobs:
         run: |
           npm ci --ignore-scripts
 
-      - name: Install Appium
-        continue-on-error: true
-        run: |
-          npm i appium -g
-          appium driver install xcuitest
+#      - name: Install Appium
+#        continue-on-error: true
+#        run: |
+#          npm i appium -g
+#          appium driver install xcuitest
 
-      - name: Start Appium
-        run: |
-          appium --session-override 
+#      - name: Start Appium
+#
+#        run: |
+#          appium --session-override
 
       - name: Check simulator booting status
         run: |
