@@ -23,7 +23,6 @@ jobs:
 
       - name: Export environment variables
         run: |
-          npm --version
           export IPHONE_MODEL=$IPHONE_MODEL
           export IOS_VERSION=$IOS_VERSION
 
@@ -34,6 +33,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          npm explore npm/node_modules/@npmcli/run-script -g -- npm_config_global=false npm install node-gyp@latest
           npm i
 
       - name: Check simulator booting status
