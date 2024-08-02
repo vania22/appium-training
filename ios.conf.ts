@@ -1,4 +1,5 @@
 // @ts-nocheck
+// @ts-ignore
 
 import type {Options} from '@wdio/types'
 
