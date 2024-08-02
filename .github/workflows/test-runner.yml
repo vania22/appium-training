@@ -32,7 +32,7 @@ jobs:
           ./src/ci_helpers/create_ios_simulator.sh
 
       - name: Install Dependencies
-        run: |
+        run: |      
           npm ci --ignore-scripts
 
 #      - name: Install Appium
